@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Dock - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+       
+        
+        <!-- Content Section -->
+        <div class="content">
+            <h1>Coming Soon</h1>
+            <p>We're almost ready! Stay tuned for the launch of Hiring Dock, your ultimate recruitment platform.</p>
+            
+            <!-- Countdown Timer -->
+            <div id="countdown">
+                <div class="time"><span id="days">00</span><p>Days</p></div>
+                <div class="time"><span id="hours">00</span><p>Hours</p></div>
+                <div class="time"><span id="minutes">00</span><p>Minutes</p></div>
+                <div class="time"><span id="seconds">00</span><p>Seconds</p></div>
+            </div>
+            
+            <!-- Join Waitlist Button -->
+            <button class="join-waitlist" href="Form.html">Join Waitlist</button>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        const targetDate = new Date('April 1, 2025 00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
+
